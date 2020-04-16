@@ -7,9 +7,7 @@
 </head>
 <body>
     <div class="main-card">
-
         <?php  include_once 'views/includes/header.php' ?>
-
         <section class="section-salon">
             <div class="container">
                 <hr class="divider">

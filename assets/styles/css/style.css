@@ -43,6 +43,8 @@ a:hover
 
 /*------------------------------------*/
 
+/* Index */
+
 .main-card{
     position: relative;
     min-height: 96vh;
@@ -122,3 +124,5 @@ footer p{
     font-size: 1.2rem;
     color: rgb(80, 74, 74);
 }
+
+/* Index */

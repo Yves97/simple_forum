@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar">
         <!--modal profil-->
-        <a href="index.php?page=profil">
+        <a href="<?= $page="profil" ?>">
             <img src="assets/images/photo.png" class="img-fluid img-profil" alt="photo de profile">
         </a>
     </nav>

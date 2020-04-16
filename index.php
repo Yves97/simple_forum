@@ -5,6 +5,9 @@ include_once '_config/db.php';
 include_once '_functions/functions.php';
 include_once '_classes/Autoloader.php';
 
+// render_array($_GET);
+// exit;
+
 
 // définition de la page courante
 if(isset($_GET['page']) AND !empty($_GET['page'])){
