@@ -12,9 +12,19 @@
             <div class="container">
                 <hr class="divider">
                 <h3>Profil</h3>
-                <div class="banner-info one">
-                    
+                <div class="profil-banner d-flex align-items-center one">
+                    <img src="assets/images/photo.png" alt="" class="img-fluid mr-5">
+                    <div>
+                        <p>Yves Amani</p>
+                        <p>yveskouadio111@yahoo.fr</p>
+                        <p>password</p>
+                    </div>
                 </div>
+                <a href="#">
+                    <div class="text-right mt-4">
+                        <button class="btn-edit">Modifier</button>
+                    </div>
+                </a>
             </div>
         </section>
 
