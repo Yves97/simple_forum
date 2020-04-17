@@ -211,9 +211,21 @@ label{
     width: 100%;
 }
 
+/* login */
+
+.box-form{
+    padding: 1rem;
+    width: 40vw;
+    box-shadow: var(--basic-shadow);
+}
+
+
 @media screen and (max-width:760px){
     .box-response{
         width: 100%;
+    }
+    .box-form{
+        width: 95%;
     }
     .profil-banner{
         flex-direction: column;
