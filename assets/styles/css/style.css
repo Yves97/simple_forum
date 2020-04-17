@@ -109,13 +109,9 @@ label{
     padding: 1rem;
 }
 
-.group-tchat-info h3{
-    color: var(--color-green-light);
-}
+.group-tchat-info h3{color: var(--color-green-light);}
 
-.group-tchat-info h4{
-    color: var(--color-dark);
-}
+.group-tchat-info h4{color: var(--color-dark);}
 
 /* Profil */
 
@@ -186,8 +182,10 @@ label{
     text-align: right;
 }
 
+.box-response,
+.response{width: 80%;}
+
 .box-response{
-    width: 80%;
     margin: 1.5rem auto;
     padding: 1rem 2rem;
     border-bottom: 2px solid var(--color-green-light);
@@ -201,14 +199,9 @@ label{
     border-radius: 50%;
 }
 
-.response{
-    width: 80%;
-    margin: 0 auto;
-}
+.response{margin: 0 auto;}
 
-.response textarea{
-    width: 100%;
-}
+.response textarea{width: 100%;}
 
 /* login */
 
@@ -217,7 +210,6 @@ label{
     width: 40vw;
     box-shadow: var(--basic-shadow);
 }
-
 
 @media screen and (max-width:760px){
     .box-response{
