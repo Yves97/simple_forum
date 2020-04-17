@@ -14,7 +14,7 @@ if(isset($_GET['page']) AND !empty($_GET['page'])){
     $page = trim(strtolower($_GET['page']));
 }
 else{
-    $page = 'home';
+    $page = 'tchat';
 }
 
 // Array contenant toutes les pages
