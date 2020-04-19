@@ -3,10 +3,10 @@
 include_once '_config/config.php';
 include_once '_config/db.php';
 include_once '_functions/functions.php';
-include_once '_classes/Autoloader.php';
 
-// render_array($_GET);
-// exit;
+include_once '_classes/Autoloader.php';
+Autoloader::register();
+
 
 
 // définition de la page courante
@@ -14,7 +14,7 @@ if(isset($_GET['page']) AND !empty($_GET['page'])){
     $page = trim(strtolower($_GET['page']));
 }
 else{
-    $page = 'tchat';
+    $page = 'forum';
 }
 
 // Array contenant toutes les pages

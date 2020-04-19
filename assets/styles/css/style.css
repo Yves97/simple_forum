@@ -172,15 +172,21 @@ label{
     margin-bottom: 4rem;
 }
 
-.box-main-question h3{
-    font-size: 3rem;
+
+.box-main-question span:first-child{
+    font-size: 4rem;
     color: var(--color-purple);
+    transition: var(--default-transition)
 }
 
-.box-main-question p:last-child{
+.box-main-question span:first-child:hover{
+    text-decoration: underline;
+}
+
+/* .box-main-question p:last-child{
     font-size: 1.3rem;
     text-align: right;
-}
+} */
 
 .box-response,
 .response{width: 80%;}

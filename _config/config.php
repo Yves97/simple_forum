@@ -42,9 +42,9 @@ define("WEBSITE_AUTHOR_MAIL", "");
 
 
 // DataBase informations
-define("DATABASE_HOST", "");
-define("DATABASE_NAME", "");
-define("DATABASE_USER", "");
+define("DATABASE_HOST", "localhost");
+define("DATABASE_NAME", "forum");
+define("DATABASE_USER", "root");
 define("DATABASE_PASSWORD", "");
 
 
