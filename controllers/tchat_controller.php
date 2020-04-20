@@ -25,7 +25,7 @@
         }
     }
     
-
+    //get Post By Users
     $userPost = new Post();
     $resultPost = $userPost->getPostByUser($userId,$title);
     $commentsByPost = new Comment();

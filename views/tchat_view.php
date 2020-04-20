@@ -6,7 +6,7 @@
     <title><?= $page ?></title>
 </head>
 <body>
-<div class="main-card">
+    <div class="main-card">
         <?php  include_once 'views/includes/header.php' ?>
         <section class="section-salon">
             <div class="container">
@@ -46,7 +46,6 @@
                 </div>
             </div>
         </section>
-
         <?php #include_once 'views/includes/footer.php' ?>
     </div>
 </body>

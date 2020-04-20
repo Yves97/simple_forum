@@ -20,6 +20,6 @@
                 <?php endforeach ?>
             </div>
         </section>
-        <?php #include_once 'views/includes/footer.php' ?>
+        <?php include_once 'views/includes/footer.php' ?>
     </div>
 </body>

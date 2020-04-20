@@ -13,24 +13,24 @@
                 <hr class="divider">
                 <h3>Modification Profil</h3>
                 <div class="profil-banner mt-5">
-                    <form action="">
+                    <form action="" method="POST">
                         <div class="row mb-3">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div class="input-group">
                                     <label for="pseudo">Pseudo</label>
-                                    <input class="input-edit" type="text" name="" id="pseudo" placeholder="amani yves">
+                                    <input class="input-edit" type="text" name="" id="pseudo" value="<?= $pseudo ?>">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div class="input-group">
-                                    <label for="pseudo">Mot de passe</label>
-                                    <input class="input-edit" type="text" name="" id="pseudo" placeholder="12047">
+                                    <label for="password">Mot de passe</label>
+                                    <input class="input-edit" type="text" name="" id="password" value="<?= $password ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="input-group mb-5">
                             <label for="pseudo">Email</label>
-                            <input class="input-edit" type="text" name="" id="email" placeholder="yveskouadio111@yahoo.fr">
+                            <input class="input-edit" type="text" name="" id="email" value="<?= $email ?>">
                         </div>
                         <button type="submit" class="btn-edit">Modifier</button>
                     </form>

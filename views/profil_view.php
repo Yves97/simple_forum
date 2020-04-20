@@ -15,13 +15,12 @@
                 <div class="profil-banner d-flex align-items-center one">
                     <img src="assets/images/photo.png" alt="" class="img-fluid mr-5">
                     <div>
-                        <p>Yves Amani</p>
-                        <p>yveskouadio111@yahoo.fr</p>
-                        <p>password</p>
+                        <p><?= $pseudo  ?></p>
+                        <p><?= $email  ?></p>
                     </div>
                 </div>
-                <a href="#">
-                    <div class="text-right mt-4">
+                <a href="edit-profil">
+                    <div class="mt-4">
                         <button class="btn-edit">Modifier</button>
                     </div>
                 </a>

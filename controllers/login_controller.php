@@ -13,6 +13,8 @@ if(!empty($_POST) && isset($_POST['btnLogin'])){
             render_array($r);
             $_SESSION['id'] = $r['id'];
             $_SESSION['pseudo'] = $r['pseudo'];
+            $_SESSION['password'] = $r['password'];
+            $_SESSION['email'] = $r['email'];
             header('Location:forum');
         }else{
             $error = "Vous devez remplir tout les champs";
