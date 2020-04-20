@@ -25,7 +25,7 @@
             $reqPostUser = $db->fetch("
             SELECT * FROM post 
             WHERE post.user_id = ?
-            AND post.title = ?",[$id,$title],false);
+            AND post.title = ?",[$id,$title],true);
             return $reqPostUser;
         }
     }

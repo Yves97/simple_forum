@@ -173,13 +173,13 @@ label{
 }
 
 
-.box-main-question span:first-child{
+.box-main-question span{
     font-size: 4rem;
     color: var(--color-purple);
     transition: var(--default-transition)
 }
 
-.box-main-question span:first-child:hover{
+.box-main-question a > span:hover{
     text-decoration: underline;
 }
 

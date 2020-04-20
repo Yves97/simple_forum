@@ -1,7 +1,7 @@
 <?php 
 
 $allPost = Post::getAllPost();
-render_array($allPost);
+// render_array($allPost);
 
 
 
