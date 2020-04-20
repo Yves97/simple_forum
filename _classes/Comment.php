@@ -17,4 +17,12 @@
             ",[$postId],true);
             return $reqCommentByPost;
         }
+
+        //--->add Comment
+        public function addComment($response,$userId,$postId){
+            global $db;
+            $reqAddComment = $db->execute("INSERT INTO comment(response,user_id,post_id) VALUES(?,?,?)",[$response,$userId,$postId]);
+            return $reqAddComment;
+
+        }
     }

@@ -7,16 +7,16 @@
         public $password;
         
         /* constructeur */
-        function __construct($id){
-            global $db;
-            $reqUser = $db->fetch('SELECT * FROM users WHERE id = ?',[$id],false);
-            $data = $reqUser;
+        // function __construct($id){
+        //     global $db;
+        //     $reqUser = $db->fetch('SELECT * FROM users WHERE id = ?',[$id],false);
+        //     $data = $reqUser;
 
-            $this->id = $id;
-            $this->pseudo = $data['pseudo'];
-            $this->email = $data['email'];
-            $this->password = $data['password'];
-        }
+        //     $this->id = $id;
+        //     $this->pseudo = $data['pseudo'];
+        //     $this->email = $data['email'];
+        //     $this->password = $data['password'];
+        // }
 
 
         /* getter */
@@ -24,6 +24,14 @@
             global $db;
             $reqUsers = $db->fetch("SELECT * FROM users",[],true);
             return $reqUsers;
+        }
+
+        public function getUser($email,$password){
+            global $db;
+            $reqUsr = $db->fetch("SELECT * FROM users
+            WHERE email = ? 
+            AND password = ?",[$email,$password],false);
+            return $reqUsr;
         }
 
     }

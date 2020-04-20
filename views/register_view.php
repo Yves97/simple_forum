@@ -14,7 +14,8 @@
                 <input class="input-edit" type="text" name="" placeholder="Pseudo">
                 <input type="email" name="" class="input-edit" id="" placeholder="Email">
                 <input class="input-edit" type="password" name="" id="" placeholder="Password">
-                <button type="submit" class="btn-edit">Se connecter</button>
+                <button type="submit" class="btn-edit">S'inscrire</button>
+                <span>J'ai déja un compte me <a href="<?= $page = 'login' ?>">Connecter</a></span>
             </form>
         </div>
     </div>

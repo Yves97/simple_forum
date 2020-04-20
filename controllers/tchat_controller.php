@@ -1,14 +1,32 @@
 <?php 
-    // render_array($_GET);
+    // get superGlobals
     $userId = $_GET['id'];
     $title = $_GET['title'];
+    $postId = $_GET['postId'];
+    $sessionUser = $_SESSION['id'];
+    // var_dump($_POST);
+
+    if(!empty($_POST) && isset($_POST['btnResponse'])){
+
+        if(isset($_POST['response'])){
+
+            if(!empty($_POST['response'])){
+                $response = secure_data($_POST['response']);
+                $addCmt = new Comment();
+                $addCmt->addComment($response,$sessionUser,$postId);
+                // exit;
+
+            }else{
+                $error = "Vous ne devez pas laisser ce champ vide !";
+            }
+    
+        }else{
+            $error = "Une erreur s'est produite,Rééssayez";
+        }
+    }
+    
+
     $userPost = new Post();
     $resultPost = $userPost->getPostByUser($userId,$title);
-    // render_array($resultPost);
-
-    $postId = $_GET['postId'];
     $commentsByPost = new Comment();
     $resultComments = $commentsByPost->getCommentByPost($postId);
-    // render_array($resultComments);
-    // var_dump($comments);
-    // render_array($comments->getCommentByPost(1,2));
