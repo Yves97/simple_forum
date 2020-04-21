@@ -12,11 +12,11 @@
             <div class="container">
                 <hr class="divider">
                 <h3>Profil</h3>
-                <div class="profil-banner d-flex align-items-center one">
+                <div class="profil-banner d-flex align-items-center">
                     <img src="assets/images/photo.png" alt="" class="img-fluid mr-5">
                     <div>
-                        <p><?= $pseudo  ?></p>
-                        <p><?= $email  ?></p>
+                        <p><?= $user->pseudo  ?></p>
+                        <p><?= $user->email ?></p>
                     </div>
                 </div>
                 <a href="edit-profil">

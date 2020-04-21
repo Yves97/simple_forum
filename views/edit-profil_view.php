@@ -18,22 +18,25 @@
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div class="input-group">
                                     <label for="pseudo">Pseudo</label>
-                                    <input class="input-edit" type="text" name="" id="pseudo" value="<?= $pseudo ?>">
+                                    <input class="input-edit" type="text" name="pseudo" id="pseudo" value="<?= $user->pseudo ?>">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div class="input-group">
-                                    <label for="password">Mot de passe</label>
-                                    <input class="input-edit" type="text" name="" id="password" value="<?= $password ?>">
+                                    <label for="pseudo">Email</label>
+                                    <input class="input-edit" type="text" name="email" id="email" value="<?= $user->email ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="input-group mb-5">
-                            <label for="pseudo">Email</label>
-                            <input class="input-edit" type="text" name="" id="email" value="<?= $email ?>">
+                            <label for="password">Mot de passe</label>
+                            <input class="input-edit" type="text" name="password" id="password" value="<?= $user->password ?>">
                         </div>
-                        <button type="submit" class="btn-edit">Modifier</button>
+                        <button type="submit" class="btn-edit" name="btnUpdate">Modifier</button>
                     </form>
+                    <?php if(isset($error)): ?>
+                        <?= $error ?>
+                    <?php endif ?>
                 </div>
                 
             </div>
