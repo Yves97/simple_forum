@@ -5,13 +5,7 @@
         public $content;
         public $date;
         public $userId;
-
-
-        // function __construct(){
-        //     global $db;
-            
-        // }
-
+        
         //get All Post
         public function getAllPost(){
             global $db;
