@@ -16,7 +16,7 @@
                 <button type="submit" class="btn-edit mr-2" name="btnLogin">Se connecter</button>
                 <span>Je n'ai pas de compte <a href="<?= $page = 'register' ?>">M'inscrire</a></span>
                 <?php if(isset($error)){
-                    echo '<p class="text-danger mt-3">'.$error.'</p>';
+                    echo '<p class="text-danger mt-3 text-right">'.$error.'</p>';
                 } ?>
             </form>
         </div>

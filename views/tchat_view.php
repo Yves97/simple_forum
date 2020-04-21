@@ -33,12 +33,12 @@
                     <hr class="divider mt-5">
                     <h3>Votre reponse ici</h3>
                     <?php if(isset($error)): ?>
-                        <?= '<p class="text-danger">'.$error.'</p>' ?>
+                        <?= '<p class="text-danger text-right">'.$error.'</p>' ?>
                     <?php endif ?>
                     <form action="" method="POST">
                         <textarea name="response" id="" cols="30" rows="10"></textarea>
                         <div>
-                        <?php if($_SESSION['pseudo'] != null){ ?>
+                        <?php if($_SESSION['id'] != null){ ?>
                         <?= "<button type='submit' class='btn-edit' name='btnResponse'>Envoyer</button>";}  else{ ?>
                         <?=  "<a href='login' class='btn-edit'>Envoyer</a>"; }?>
                         </div>

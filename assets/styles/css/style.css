@@ -23,9 +23,7 @@
     box-sizing: inherit;
 }
 
-html{
-    font-size: 62.5%;
-}
+html{font-size: 62.5%;}
 
 body{
     font-size: 1.6rem;
@@ -36,17 +34,13 @@ body{
 }
 
 a,
-a:hover
-{
-    text-decoration: none;
-}
+a:hover{text-decoration: none;}
 
 footer{
     position: absolute;
     bottom: 0;
     width: 100%;
     margin-top: 3rem;
-
 }
 
 footer p{
@@ -56,9 +50,7 @@ footer p{
     color: rgb(80, 74, 74);
 }
 
-label{
-    margin-bottom: 0;
-}
+label{margin-bottom: 0;}
 
 /*------------------------------------*/
 
@@ -98,9 +90,7 @@ label{
     background:var(--color-green-light);
 }
 
-.divider + h3{
-    color: var(--color-dark);
-}
+.divider + h3{color: var(--color-dark);}
 
 .group-tchat-card{
     position: relative;
@@ -145,9 +135,7 @@ label{
     cursor: pointer;
 }
 
-.btn-edit:hover{
-    box-shadow: 0 1px 5px 0 var(--color-green-light), 0 2px 2px 0 var(--color-green-light), 0 3px 1px -2px var(--color-green-light);
-}
+.btn-edit:hover{box-shadow: 0 1px 5px 0 var(--color-green-light), 0 2px 2px 0 var(--color-green-light), 0 3px 1px -2px var(--color-green-light);}
 
 .btn-edit:focus{
     outline-color: var(--color-green-light);
@@ -175,7 +163,6 @@ label{
     margin-bottom: 4rem;
 }
 
-
 .box-main-question span{
     font-size: 4rem;
     color: var(--color-purple);
@@ -185,11 +172,6 @@ label{
 .box-main-question a > span:hover{
     text-decoration: underline;
 }
-
-/* .box-main-question p:last-child{
-    font-size: 1.3rem;
-    text-align: right;
-} */
 
 .box-response,
 .response{width: 80%;}

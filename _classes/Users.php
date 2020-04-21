@@ -43,4 +43,11 @@
             return $reqUpdate;
         }
 
+        //insert user
+        public function insertUser($pseudo,$email,$password){
+            global $db;
+            $reqInsert = $db->execute("INSERT INTO users(pseudo,email,password) VALUES(?,?,?)",[$pseudo,$email,$password]);
+            return $reqInsert;
+        }
+
     }
