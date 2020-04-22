@@ -78,8 +78,8 @@ label{margin-bottom: 0;}
 }
 
 .img-profil{
-    max-width: 5.7rem;
-    max-height: 5.7rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     border: 1px solid var(--color-green-light);
 }
@@ -212,6 +212,7 @@ label{margin-bottom: 0;}
     .profil-banner,
     .navbar{
         flex-direction: column;
+        align-items: flex-start;
     }
     .profil-banner{
         text-align: center;

@@ -21,7 +21,7 @@
                     <?php foreach($resultComments as $key => $value): ?>
                         <div class="box-response mb-5">
                             <div class="user d-flex">
-                                <img src="assets/images/photo.png" alt="" class="mr-3">
+                                <img src="assets/images/avatar/<?= $value['avatar'] ?>" alt="" class="mr-3">
                                 <div>
                                     <p><?= $value['pseudo'] ?></p>
                                 </div>

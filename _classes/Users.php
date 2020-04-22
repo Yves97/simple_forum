@@ -6,6 +6,7 @@
         public $pseudo;
         public $email;
         public $password;
+        public $avatar;
         
         /* constructeur */
         function __construct($id){
@@ -17,6 +18,7 @@
             $this->pseudo = $data['pseudo'];
             $this->email = $data['email'];
             $this->password = $data['password'];
+            $this->avatar = $data['avatar'];
         }
 
 
@@ -37,16 +39,16 @@
         }
 
         //update user
-        public function updateUser($pseudo,$email,$password,$id){
+        public function updateUser($pseudo,$email,$password,$avatar,$id){
             global $db;
-            $reqUpdate = $db->execute("UPDATE users SET pseudo = ?,email = ?,password = ? WHERE id = ?",[$pseudo,$email,$password,$id]);
+            $reqUpdate = $db->execute("UPDATE users SET pseudo = ?,email = ?,password = ?, avatar = ? WHERE id = ?",[$pseudo,$email,$password,$avatar,$id]);
             return $reqUpdate;
         }
 
         //insert user
-        public function insertUser($pseudo,$email,$password){
+        public function insertUser($pseudo,$email,$password,$avatar){
             global $db;
-            $reqInsert = $db->execute("INSERT INTO users(pseudo,email,password) VALUES(?,?,?)",[$pseudo,$email,$password]);
+            $reqInsert = $db->execute("INSERT INTO users(pseudo,email,password,avatar) VALUES(?,?,?,?)",[$pseudo,$email,$password,$avatar]);
             return $reqInsert;
         }
 

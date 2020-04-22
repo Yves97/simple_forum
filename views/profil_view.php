@@ -13,7 +13,7 @@
                 <hr class="divider">
                 <h3>Profil</h3>
                 <div class="profil-banner d-flex align-items-center">
-                    <img src="assets/images/photo.png" alt="" class="img-fluid mr-5">
+                    <img src="assets/images/avatar/<?= $user->avatar ?>" alt="avatar" class="img-fluid mr-5">
                     <div>
                         <p><?= $user->pseudo  ?></p>
                         <p><?= $user->email ?></p>

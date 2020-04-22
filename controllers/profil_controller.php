@@ -1,2 +1,2 @@
 <?php 
-    $user = new Users($_SESSION['id']);    
+    $user = new Users($_SESSION['id']); 
