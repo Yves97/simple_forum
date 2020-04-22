@@ -1,10 +1,9 @@
 <?php 
     // get superGlobals
-    $userId = $_GET['id'];
-    $title = $_GET['title'];
-    $postId = $_GET['postId'];
-    $sessionUser = $_SESSION['id'];
-    // var_dump($_POST);
+    // render_array($_GET);
+    // exit;
+    $postId = $_GET['id'];
+    $sessionUser = new Users($_SESSION['id']);
 
     if(!empty($_POST) && isset($_POST['btnResponse'])){
 
@@ -13,7 +12,7 @@
             if(!empty($_POST['response'])){
                 $response = secure_data($_POST['response']);
                 $addCmt = new Comment();
-                $addCmt->addComment($response,$sessionUser,$postId);
+                $addCmt->addComment($response,$sessionUser->id,$postId);
                 // exit;
 
             }else{
@@ -26,7 +25,10 @@
     }
     
     //get Post By Users
-    $userPost = new Post();
-    $resultPost = $userPost->getPostByUser($userId,$title);
+    $userPost = Post::getPostByUserId($postId);
+    // render_array($userPost);
+    // exit;
     $commentsByPost = new Comment();
     $resultComments = $commentsByPost->getCommentByPost($postId);
+    // render_array($resultComments);
+    // exit;

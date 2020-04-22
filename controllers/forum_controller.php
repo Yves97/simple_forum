@@ -4,8 +4,7 @@
 
 $allPost = Post::getAllPost();
 // render_array($allPost);
-
-
+// exit;
 
 ?>
 

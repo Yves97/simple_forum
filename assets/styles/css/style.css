@@ -102,7 +102,9 @@ label{margin-bottom: 0;}
     padding: 1rem;
 }
 
-.group-tchat-info h3{color: var(--color-green-light);}
+.group-tchat-info h3,
+.pseudo
+{color: var(--color-green-light);}
 
 .group-tchat-info h4{color: var(--color-dark);}
 
@@ -157,19 +159,21 @@ label{margin-bottom: 0;}
 }
 
 .box-main-question{
+    max-height: 40rem;
+    overflow: auto;
     border:none;
     box-shadow: var(--basic-shadow);
     padding: 1rem;
     margin-bottom: 4rem;
 }
 
-.box-main-question span{
+.box-main-question .title{
     font-size: 4rem;
     color: var(--color-purple);
     transition: var(--default-transition)
 }
 
-.box-main-question a > span:hover{
+.box-main-question a > .title:hover{
     text-decoration: underline;
 }
 
@@ -214,11 +218,7 @@ label{margin-bottom: 0;}
         align-items: flex-start;
     }
 
-    .profil-banner{
-        text-align: center;
-    }
+    .profil-banner{text-align: center;}
     
-    .profil-banner > img{
-        margin:1rem 0 !important;
-    }
+    .profil-banner > img{margin:1rem 0 !important;}
 }

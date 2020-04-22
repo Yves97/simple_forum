@@ -6,20 +6,35 @@
         public $date;
         public $userId;
         
-        //get All Post
+        /* constructeur */
+        function __construct($id){
+            global $db;
+            $reqUser = $db->fetch('SELECT * FROM post WHERE id = ?',[$id],false);
+            $data = $reqUser;
+
+            $this->id = $id;
+            $this->pseudo = $data['title'];
+            $this->email = $data['content'];
+            $this->password = $data['date'];
+            $this->avatar = $data['userid'];
+        }
+
+        ////get All Post
         public function getAllPost(){
             global $db;
-            $reqPosts = $db->fetch("SELECT * FROM post",[],true);
-            return $reqPosts;
+            $reqUsersPost = $db->fetch("
+                SELECT users.pseudo,post.* 
+                FROM users,post WHERE user_id = users.id",[],true);
+                return $reqUsersPost;
         }
 
         //get Post By User
-        public function getPostByUser($id,$title){
+        public function getPostByUserId($id){
             global $db;
             $reqPostUser = $db->fetch("
-            SELECT * FROM post 
-            WHERE post.user_id = ?
-            AND post.title = ?",[$id,$title],true);
+            SELECT post.*,users.pseudo FROM post,users
+            WHERE post.user_id = users.id
+            AND post.id = ?",[$id],true);
             return $reqPostUser;
         }
     }

@@ -39,7 +39,7 @@
                         <button type="submit" class="btn-edit" name="btnUpdate">Modifier</button>
                     </form>
                     <?php if(isset($error)): ?>
-                        <?= $error ?>
+                        <?= '<p class="text-danger mt-3">'.$error.'</p>' ?>
                     <?php endif ?>
                 </div>
                 

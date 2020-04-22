@@ -11,11 +11,13 @@
         <section class="section-salon">
             <div class="container">
                     <div class="box-main-question">
-                        <?php foreach($resultPost as $key => $value): ?>
-                            <span><?= $value['title'] ?></span>
+                        <?php foreach($userPost as $key => $value): ?>
+                            <span class="title"><?= $value['title'] ?></span>
                             <p><?= $value['content'] ?></p>
-                            <p class="text-right">Publié le <?= date_format(date_create( $value['date']),"d/m/Y H:i") ?></p>
-                        <?php endforeach ?>
+                            <div class="text-right">
+                                <small class="text-right">Publié le <?= date_format(date_create( $value['date']),"d/m/Y H:i") ?> Par  <span class="pseudo"><?= $value['pseudo'] ?></span></small>
+                            </div>
+                            <?php endforeach ?>
                     </div>
 
                     <?php foreach($resultComments as $key => $value): ?>
@@ -27,13 +29,16 @@
                                 </div>
                             </div>
                             <p><?= $value['response'] ?></p>
+                            <div class="text-right">
+                                <small class="text-right">Répondu le <?= date_format(date_create( $value['date_add']),"d/m/Y H:i") ?></small>
+                            </div>
                         </div>
                     <?php endforeach ?>
                 <div class="response">
                     <hr class="divider mt-5">
                     <h3>Votre reponse ici</h3>
                     <?php if(isset($error)): ?>
-                        <?= '<p class="text-danger text-right">'.$error.'</p>' ?>
+                        <?= '<p class="text-danger">'.$error.'</p>' ?>
                     <?php endif ?>
                     <form action="" method="POST">
                         <textarea name="response" id="" cols="30" rows="10"></textarea>
