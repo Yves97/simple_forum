@@ -19,7 +19,7 @@
                 //traitement des images
                 $infosfichier = pathinfo($_FILES['avatar']['name']);
                 $extension_upload = $infosfichier['extension'];
-                $extension_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+                $extension_autorisees = array('jpg', 'jpeg', 'gif', 'png','JPG','JPEG','GIF','PNG');
                 if(in_array($extension_upload,$extension_autorisees)){
 
                     //répertoire de stockage définitif
