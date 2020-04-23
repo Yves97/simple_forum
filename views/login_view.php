@@ -11,7 +11,7 @@
             <hr class="divider">
             <h3>Login</h3>
             <form action="" method="POST">
-                <input name="email" class="input-edit" type="text" placeholder="Email">
+                <input name="email" class="input-edit" type="text" placeholder="Email" autocomplete="off">
                 <input name="password" class="input-edit" type="password" id="" placeholder="Password">
                 <button type="submit" class="btn-edit mr-2" name="btnLogin">Se connecter</button>
                 <span>Je n'ai pas de compte <a href="<?= $page = 'register' ?>">M'inscrire</a></span>

@@ -11,12 +11,9 @@
             <hr class="divider">
             <h3>Register</h3>
             <form action="" method="POST" enctype="multipart/form-data">
-                <input class="input-edit" type="text" name="pseudo" placeholder="Pseudo">
-                
-                <input type="email" name="email" class="input-edit"  placeholder="Email">
-                
+                <input class="input-edit" type="text" name="pseudo" placeholder="Pseudo" autocomplete="off">
+                <input type="email" name="email" class="input-edit"  placeholder="Email" autocomplete="off">
                 <input class="input-edit" type="password" name="password"  placeholder="Password">
-                
                 <div class="input-group">
                     <label for="avatar" class="mb-2">Ajouter une photo</label>
                     <input type="file" name="avatar" id="avatar" class="input-edit w-100 mb-3">

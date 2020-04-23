@@ -32,3 +32,6 @@
     $resultComments = $commentsByPost->getCommentByPost($postId);
     // render_array($resultComments);
     // exit;
+
+    $nb_responses = Comment::countResponses($postId);
+    // render_array($nb_responses);

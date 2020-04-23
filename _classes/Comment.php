@@ -24,4 +24,17 @@
             $reqAddComment = $db->execute("INSERT INTO comment(response,user_id,post_id) VALUES(?,?,?)",[$response,$userId,$postId]);
             return $reqAddComment;
         }
+
+        // count comment in function of postid from userId
+        public function countResponses($postId){
+            global $db;
+            $reqCountRes = $db->fetch("
+            SELECT COUNT(*) AS nb_responses
+            FROM comment,users ,post 
+            WHERE comment.user_id = users.id 
+            AND comment.post_id = post.id 
+            AND post.id = ?
+            ",[$postId],false);
+            return $reqCountRes;
+        }
     }

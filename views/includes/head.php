@@ -7,8 +7,5 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"> -->
 <link rel="stylesheet" href="assets/styles/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/styles/css/style.css">
-<!-- jquery ******************************************** -->
-<script src="assets/js/jquery.js"></script>
 <!-- script ****************************************** -->
-<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/main.js"></script>

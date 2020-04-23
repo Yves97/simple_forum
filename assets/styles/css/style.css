@@ -23,7 +23,10 @@
     box-sizing: inherit;
 }
 
-html{font-size: 62.5%;}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 
 body{
     font-size: 1.6rem;
@@ -52,6 +55,8 @@ footer p{
 
 label{margin-bottom: 0;}
 
+.bg-green-light{background-color: var(--color-green-light);}
+
 /*------------------------------------*/
 
 /* Index */
@@ -73,9 +78,7 @@ label{margin-bottom: 0;}
     position: relative;
 }
 
-.navbar ul li{
-    padding: 1rem;
-}
+.navbar ul li{padding: 1rem;}
 
 .img-profil{
     width: 6rem;
@@ -127,21 +130,31 @@ label{margin-bottom: 0;}
     margin-bottom: 0;
 }
 
-.btn-edit{
-    font-size: 1.8rem;
+.btn-edit,
+.btn-response{
+    padding: .5rem 2rem;
+    font-size: 1.7rem;
     border: none;
+    cursor: pointer;
+    transition: var(--default-transition);
+}
+
+.btn-edit{
     color: var(--color-green-light);
     background: var(--color-grey-light);
-    padding: .5rem 2rem;
-    transition: var(--default-transition);
-    cursor: pointer;
 }
 
+.btn-response{
+    background: var(--color-purple);
+    color:var(--white);
+}
+
+.btn-response:hover{box-shadow: 0 1px 5px 0 var(--color-purple), 0 2px 2px 0 var(--color-purple), 0 3px 1px -2px var(--color-purple);}
 .btn-edit:hover{box-shadow: 0 1px 5px 0 var(--color-green-light), 0 2px 2px 0 var(--color-green-light), 0 3px 1px -2px var(--color-green-light);}
 
-.btn-edit:focus{
-    outline-color: var(--color-green-light);
-}
+.btn-edit:focus{outline-color: var(--color-green-light);}
+.btn-response:focus{outline-color: var(--color-purple);}
+
 
 .input-edit,
 .response textarea{
