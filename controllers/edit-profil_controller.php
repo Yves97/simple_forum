@@ -1,13 +1,7 @@
 <?php 
     $user = new Users($_SESSION['id']);
-    // render_array($_POST['avatar']);
-    // render_array($_POST);
-    // render_array($user);
     $_FILES['old_avatar']['name'] = $user->avatar;
-    // render_array($_FILES);
-    // render_array($_GET);
-    // exit;
-    
+
 
     if(!empty($_POST) && isset($_POST['btnUpdate']) && isset($_FILES['old_avatar'])){
 
@@ -29,8 +23,6 @@
                     $old_avatar_name = $avatar_name;
                     // render_array($avatar);
                 }
-                // echo 'ok';
-                // exit;
 
                 move_uploaded_file($_FILES['avatar']['tmp_name'],'assets/images/avatar/'.basename($avatar_name));
 
