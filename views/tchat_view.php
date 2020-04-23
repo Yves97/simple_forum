@@ -44,7 +44,7 @@
                         <?= '<p class="text-danger">'.$error.'</p>' ?>
                     <?php endif ?>
                     <form action="" method="POST">
-                        <textarea name="response" id="" cols="30" rows="10"></textarea>
+                        <textarea name="response" cols="30" rows="10"></textarea>
                         <div>
                         <?php if($_SESSION['id'] != null){ ?>
                         <?= "<button type='submit' class='btn-edit' name='btnResponse'>Envoyer</button>";}  else{ ?>

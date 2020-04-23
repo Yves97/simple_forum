@@ -1,19 +1,40 @@
 <?php 
-    $user = new Users($_SESSION['id']);  
+    $user = new Users($_SESSION['id']);
+    // render_array($_POST['avatar']);
+    // render_array($_POST);
+    // render_array($user);
+    $_FILES['old_avatar']['name'] = $user->avatar;
+    // render_array($_FILES);
+    // render_array($_GET);
+    // exit;
+    
 
-    if(!empty($_POST) && isset($_POST['btnUpdate']) && isset($_FILES['avatar'])){
+    if(!empty($_POST) && isset($_POST['btnUpdate']) && isset($_FILES['old_avatar'])){
 
-        if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0){
+        if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_FILES['old_avatar'])){
 
-            if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && $_FILES['avatar']['size'] <= 1000000){
+            if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && ($_FILES['avatar']['size'] <= 1000000 && $_FILES['avatar']['size'] >= 0)){
                 $pseudoUsr = secure_data($_POST['pseudo']);
                 $emailUsr = secure_data($_POST['email']);
                 $passwordUsr = secure_data($_POST['password']);
 
-                move_uploaded_file($_FILES['avatar']['tmp_name'],'assets/images/avatar/'.basename($_FILES['avatar']['name']));
-                
+                $old_avatar_name = $_FILES['old_avatar']['name'];
+                $avatar = $_FILES['avatar']['name'];
 
-                $update = Users::updateUser($pseudoUsr,$emailUsr,$passwordUsr,$_FILES['avatar']['name'],$user->id);
+                if($avatar_name == null){
+                    $avatar_name = $old_avatar_name;
+                    // render_array( $avatar);
+                }
+                else{
+                    $old_avatar_name = $avatar_name;
+                    // render_array($avatar);
+                }
+                // echo 'ok';
+                // exit;
+
+                move_uploaded_file($_FILES['avatar']['tmp_name'],'assets/images/avatar/'.basename($avatar_name));
+
+                $update = Users::updateUser($pseudoUsr,$emailUsr,$passwordUsr,$avatar_name,$user->id);
                 header('Location:profil');
 
             }else{

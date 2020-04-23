@@ -4,7 +4,9 @@
         public $user;
         public $post;
 
-
+        /* constructeur */
+        /*-------------- */
+        
         //get All Comment in function of Post
         public function getCommentByPost($postId){
             global $db;

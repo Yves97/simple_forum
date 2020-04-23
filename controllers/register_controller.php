@@ -2,15 +2,14 @@
     // render_array($_POST);
     // render_array($_FILES);
     // exit;
-
     if(!empty($_POST) && isset($_POST['btnRegister']) && isset($_FILES['avatar'])){
         
 
         if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_FILES['avatar']) && $_FILES['avatar']['error'] == 0){
-            // echo 'ok';
+            // echo 'ok 1';
             // exit;
             if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && $_FILES['avatar']['size'] <= 1000000 && $_FILES['avatar'] != ''){
-                // echo 'ok';
+                // echo 'ok 2';
                 // exit;
                 $pseudo = secure_data($_POST['pseudo']);
                 $email = secure_data($_POST['email']);
@@ -24,7 +23,8 @@
 
                     //répertoire de stockage définitif
                     move_uploaded_file($_FILES['avatar']['tmp_name'],'assets/images/avatar/'.basename($_FILES['avatar']['name']));
-                
+                    // echo 'ok 3';
+                    // exit;
                     //insert in database
                     $insert = Users::insertUser($pseudo,$email,$password,$_FILES['avatar']['name']);
                     header('Location:login');
@@ -37,6 +37,6 @@
             }
     
         }else{
-            $error = "Une erreur s'est produite,Rééssayez";
+            $error = "Une erreur s'est produite,Votre photo est peut-etre inexistante";
         }
     }

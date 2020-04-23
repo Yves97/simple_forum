@@ -9,8 +9,15 @@ if(!empty($_POST) && isset($_POST['btnLogin'])){
             $email = secure_data($_POST['email']);
             $password = secure_data($_POST['password']);
             $usr = Users::getUser($email,$password);
-            $_SESSION['id'] = $usr['id'];
-            header('Location:forum');
+            
+            if($usr['id'] == null){
+                $error = "Vos coordonnée n'existent pas, vous n'êtes sûrement pas inscrit";
+            }
+            else{
+                $_SESSION['id'] = $usr['id'];
+                header('Location:forum');
+            }
+            
         }else{
             $error = "Vous devez remplir tout les champs";
         }

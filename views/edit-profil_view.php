@@ -34,7 +34,7 @@
                         </div>
                         <div class="input-group mb-5">
                             <label for="avatar">Photo de profil</label>
-                            <input class="input-edit" type="file" name="avatar" id="avatar" value="<?= $user->password ?>">
+                            <input class="input-edit" type="file" name="avatar" id="avatar" value="<?= $user->avatar ?>">
                         </div>
                         <button type="submit" class="btn-edit" name="btnUpdate">Modifier</button>
                     </form>

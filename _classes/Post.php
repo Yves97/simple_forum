@@ -15,16 +15,17 @@
             $this->id = $id;
             $this->pseudo = $data['title'];
             $this->email = $data['content'];
-            $this->password = $data['date'];
-            $this->avatar = $data['userid'];
+            $this->date = $data['date'];
+            $this->userId = $data['userid'];
         }
 
-        ////get All Post
+        //get All Post
         public function getAllPost(){
             global $db;
             $reqUsersPost = $db->fetch("
                 SELECT users.pseudo,post.* 
-                FROM users,post WHERE user_id = users.id",[],true);
+                FROM users,post WHERE user_id = users.id
+                ORDER BY post.date DESC",[],true);
                 return $reqUsersPost;
         }
 
@@ -36,5 +37,14 @@
             WHERE post.user_id = users.id
             AND post.id = ?",[$id],true);
             return $reqPostUser;
+        }
+
+        //insert post
+        public function insertPost($title,$content,$userId){
+            global $db;
+            $reqInsert = $db->execute("
+            INSERT INTO post(title,content,user_id) VALUES (?,?,?)
+            ",[$title,$content,$userId]);
+            return $reqInsert;
         }
     }
