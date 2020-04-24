@@ -1,6 +1,6 @@
 <?php 
-    render_array($_SESSION);
-    render_array($_POST);
+    // render_array($_SESSION);
+    // render_array($_POST);
     // render_array($_POST);
     // render_array($_FILES);
     // exit;
