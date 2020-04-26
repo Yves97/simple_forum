@@ -1,11 +1,10 @@
 /************->VARIABLES*********<-*/
 :root {
-    --primary-color: #17a2b8;
-    --secondary-color: #7780fe;
-    --color-dark: #3a3a3a;
+    --primary-color: rgb(32, 33, 36);
+    --color-black:#000;
+    --secondary-color: rgb(138, 180, 248);
+    --main-text-color:rgb(154, 160, 166);
     --color-grey-light: rgb(228, 232, 238);
-    --color-min-grey: rgb(181, 201, 230);
-    --color-green-fade: #c7efe566;
     
     --default-transition:all .3s;
     --basic-shadow:0 1px 5px 0 rgba(84,84,84,0.2), 0 2px 2px 0 rgba(84,84,84,0.2), 0 3px 1px -2px rgba(84,84,84,0.2);
@@ -47,33 +46,25 @@ footer{
     margin-top: 3rem;
 }
 
-footer p{
-    margin-top: 3rem;
-    font-size: 1.2rem;
-    text-align: center;
-    color: rgb(80, 74, 74);
-}
-
 label{margin-bottom: 0;}
 
-.bg-green-light{background-color: var(--primary-color);}
+.bg-secondary-color{background-color: var(--secondary-color);}
+.secondary-color{color: var(--secondary-color);}
 
 /*------------------------------------*/
 
 /* Index */
 
 .main-card{
-    position: relative;
     min-height: 96vh;
-    background: var(--white);
+    background: var(--primary-color);
     border-radius: 7px; 
     padding-bottom: 1rem;
 }
 
 .navbar{
-    padding:1rem 2rem;
     z-index: 1000;
-    background: var(--white);
+    background: var(--primary-color);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     position: relative;
@@ -90,11 +81,15 @@ label{margin-bottom: 0;}
 
 .divider{
     width: 10rem;
-    height: .5rem;
-    background:var(--primary-color);
+    height: .4rem;
+    background:var(--secondary-color);
 }
 
-.divider + h3{color: var(--color-dark);}
+.divider + h3,
+.box-form a
+{color: var(--secondary-color);}
+
+.divider + h3{margin-bottom: 2rem;}
 
 .group-tchat-card{
     position: relative;
@@ -108,7 +103,7 @@ label{margin-bottom: 0;}
 
 .group-tchat-info h3,
 .pseudo
-{color: var(--primary-color);}
+{color: var(--secondary-color);}
 
 .group-tchat-info h4{color: var(--color-dark);}
 
@@ -150,11 +145,11 @@ label{margin-bottom: 0;}
     color:var(--white);
 }
 
-.btn-response:hover{box-shadow: 0 1px 5px 0 var(--secondary-color), 0 2px 2px 0 var(--secondary-color), 0 3px 1px -2px var(--secondary-color);}
-.btn-edit:hover{box-shadow: 0 1px 5px 0 var(--primary-color), 0 2px 2px 0 var(--primary-color), 0 3px 1px -2px var(--primary-color);}
+.btn-response:hover{box-shadow: 0 1px 5px 0 var(--white), 0 2px 2px 0 var(--white), 0 3px 1px -2px var(--white);}
+.btn-edit:hover{box-shadow: 0 1px 5px 0 var(--white), 0 2px 2px 0 var(--white), 0 3px 1px -2px var(--white);}
 
 .btn-edit:focus{outline-color: var(--primary-color);}
-.btn-response:focus{outline-color: var(--secondary-color);}
+.btn-response:focus{outline-color: var(--white);}
 
 
 .input-edit,
@@ -168,9 +163,7 @@ label{margin-bottom: 0;}
 }
 
 .input-edit:focus,
-.response textarea:focus{
-    outline-color: var(--primary-color);
-}
+.response textarea:focus{outline-color: var(--secondary-color);}
 
 .box-main-question{
     max-height: 40rem;
@@ -187,9 +180,17 @@ label{margin-bottom: 0;}
     transition: var(--default-transition)
 }
 
-.box-main-question a > .title:hover{
-    text-decoration: underline;
-}
+.box-main-question a > .title:hover{text-decoration: underline;}
+
+.box-main-question p,
+.box-main-question small,
+.box-form span,
+.profil-banner p,
+.box-response p,
+.box-response small,
+label
+{color: var(--main-text-color);}
+
 
 .box-response,
 .response{width: 80%;}
@@ -197,7 +198,7 @@ label{margin-bottom: 0;}
 .box-response{
     margin: 1.5rem auto;
     padding: 1rem 2rem;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
     border-radius: 15px;
     position: relative;
 }

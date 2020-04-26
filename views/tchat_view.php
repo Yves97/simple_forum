@@ -11,7 +11,7 @@
         <section class="section-salon">
             <div class="container">
                 <div class="box-main-question">
-                <p class="text-right font-italic "><span class="badge bg-green-light text-white"><?= $nb_responses['nb_responses'] ?></span> reponse(s) </p>
+                <p class="text-right font-italic "><span class="badge bg-secondary-color text-white"><?= $nb_responses['nb_responses'] ?></span> reponse(s) </p>
                     <?php foreach($userPost as $key => $value): ?>
                         <span class="title"><?= $value['title'] ?></span>
                         <p><?= $value['content'] ?></p>
