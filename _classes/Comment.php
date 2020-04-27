@@ -39,4 +39,17 @@
             ",[$postId],false);
             return $reqCountRes;
         }
+
+        //count comment in function of userId 
+        // public function countAllRes($postId,$userId){
+        //     global $db;
+        //     $reqCountAllRes = $db->fetch("
+        //     SELECT COUNT(*) AS nbr_responses FROM comment,post,users 
+        //     WHERE post.user_id = users.id 
+        //     AND post.id = comment.post_id 
+        //     AND post.id = ?
+        //     AND post.user_id = ?
+        //     ",[$postId,$userId],false);
+        //     return $reqCountAllRes;
+        // }
     }

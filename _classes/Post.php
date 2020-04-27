@@ -47,4 +47,22 @@
             ",[$title,$content,$userId]);
             return $reqInsert;
         }
+
+        //get post by userId
+        public function getPosts($userId){
+            global $db;
+            $reqPosts = $db->fetch("
+            SELECT * FROM post WHERE user_id = ?
+            ",[$userId],true);
+            return $reqPosts;
+        }
+
+        //delete Post
+        public function deletePost($postId){
+            global $db;
+            $reqDelete = $db->execute("
+            DELETE FROM post WHERE id = ?
+            ",[$postId]);
+            return $reqDelete;
+        }
     }

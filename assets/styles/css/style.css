@@ -151,6 +151,18 @@ label{margin-bottom: 0;}
 .btn-edit:focus{outline-color: var(--primary-color);}
 .btn-response:focus{outline-color: var(--white);}
 
+input[type=search]{
+    border: 1px solid var(--primary-color);
+    font-size: 1.7rem;
+    padding: .3rem .5rem;
+    transition: var(--default-transition);
+}
+
+input[type=search]:focus{
+    outline: none;
+    border: 1px solid var(--secondary-color);
+
+}
 
 .input-edit,
 .response textarea{
@@ -188,9 +200,11 @@ label{margin-bottom: 0;}
 .profil-banner p,
 .box-response p,
 .box-response small,
+#table_id thead,
+.divider + h3 + p,
+.title-post,
 label
 {color: var(--main-text-color);}
-
 
 .box-response,
 .response{width: 80%;}
@@ -220,6 +234,9 @@ label
     width: 40vw;
     box-shadow: var(--basic-shadow);
 }
+
+/* Admin*/
+
 
 @media screen and (max-width:760px){
     .box-response,

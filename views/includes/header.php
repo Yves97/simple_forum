@@ -8,8 +8,11 @@
                 <img src="assets/images/avatar/<?= $user->avatar?>" class="img-fluid img-profil mb-3" alt="avatar">
                 <p class='ml-4 secondary-color'><?= $user->pseudo ?></p>
             </a>
-            <a href="ask" class="order-2">
+            <a href="ask" class="order-3">
                 <button class="btn-edit mb-3">Poser une question</button>
+            </a>
+            <a href="dashboard" class="order-2">
+                <button class="btn-edit mb-3">Mon espace admin</button>
             </a>
             <?php if($user != null){ ?>
                 <a href="logout" class="order-5">

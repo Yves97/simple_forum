@@ -27,6 +27,9 @@ if(in_array($page.'_controller.php',$allpages)){
     include_once 'models/'.$page.'_model.php';
     include_once 'controllers/'.$page.'_controller.php';
     include_once 'views/'.$page.'_view.php';
+    // if(!isset($_SESSION['id'])){
+    //     header('Location:'.$page = 'forum');
+    // }
 
 }else{
     //retour d'une erreur
