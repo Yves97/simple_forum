@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 .htaccess/
+web: vendor/bin/heroku-php-apache2 index.php/
