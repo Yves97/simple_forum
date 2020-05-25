@@ -26,7 +26,7 @@ session_start();
 // --------------------------- //
 
 // Paths
-define("PATH_REQUIRE", $_SERVER['SCRIPT_FILENAME']); // Pour fonctions d'inclusion php
+define("PATH_REQUIRE", substr($_SERVER['SCRIPT_FILENAME'], 0, -9)); // Pour fonctions d'inclusion php
 define("PATH", substr($_SERVER['PHP_SELF'], 0, -9)); // Pour images, fichiers etc (html)
 
 // Website informations
@@ -42,7 +42,7 @@ define("WEBSITE_AUTHOR_MAIL", "");
 
 
 // DataBase informations
-define("DATABASE_HOST", "localhost");
+define("DATABASE_HOST", "127.0.0.1");
 define("DATABASE_NAME", "forum");
 define("DATABASE_USER", "root");
 define("DATABASE_PASSWORD", "");
