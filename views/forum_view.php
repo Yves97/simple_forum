@@ -17,7 +17,7 @@
                         </a>
                         <p><?= $value['content'] ?></p>
                         <div class="text-right">
-                            <small>Publié le <?= date_format(date_create( $value['date']),"d/m/Y à H:i") ?> Par  <span class="pseudo"><?= $value['pseudo'] ?></span></small>
+                            <small>Publié le <?= date_format(date_create( $value['date']), "d/m/Y à H:i") ?> Par  <span class="pseudo"><?= $value['pseudo'] ?></span></small>
                         </div>
                     </div>
                 <?php endforeach ?>

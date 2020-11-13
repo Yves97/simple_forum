@@ -42,9 +42,9 @@ define("WEBSITE_AUTHOR_MAIL", "");
 
 
 // DataBase informations
-define("DATABASE_HOST", "ec2-52-7-39-178.compute-1.amazonaws.com");
-define("DATABASE_NAME", "d5q3i05ckusvfh");
-define("DATABASE_USER", "sbybkilwbuojhl");
-define("DATABASE_PASSWORD", "7f4cac610d621adf85414a20ca5a18363e8b763e363cf755372c68fe623aab9f");
+define("DATABASE_HOST", "sql3.freesqldatabase.com");
+define("DATABASE_NAME", "sql3376354");
+define("DATABASE_USER", "sql3376354");
+define("DATABASE_PASSWORD", "u2plwjti3c");
 
 

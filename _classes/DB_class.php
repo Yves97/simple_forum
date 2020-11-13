@@ -16,7 +16,7 @@ class DB{
      * @param $dbpswd
      */
     public function __construct($dbhost, $dbname, $dbuser, $dbpswd){
-        $this->db = new PDO('pgsql:host='.$dbhost.';port=5432;dbname='.$dbname.';', $dbuser, $dbpswd);
+        $this->db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';',$dbuser, $dbpswd);
     }
 
     /**
